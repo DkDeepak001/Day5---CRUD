@@ -8,7 +8,7 @@ contract CRUD {
     }
 
     User[] public users;
-    uint256 public nextId = 0;
+    uint256 public nextId = 1;
 
     function create(string memory _name) public {
         users.push(User(nextId, _name));
@@ -36,5 +36,6 @@ contract CRUD {
                 return i;
             }
         }
+        revert("User does not exits");
     }
 }
