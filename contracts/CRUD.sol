@@ -26,7 +26,8 @@ contract CRUD {
     }
 
     function deleteId(uint256 _id) public {
-        delete users[_id];
+        uint256 i = find(_id);
+        delete users[i];
     }
 
     function find(uint256 _id) internal view returns (uint256) {
