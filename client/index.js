@@ -34,7 +34,6 @@ const initContract = () => {
 }
 
 const initApp = () =>{
-    console.clear();
     console.log("init app");
 
     const $fromCreate = document.getElementById('create');
@@ -44,6 +43,7 @@ const initApp = () =>{
 
     //init accounts
     let accounts = [];
+    console.log(accounts);
     web3.eth.getAccounts()
     .then(_accounts => {
         accounts = _accounts;
